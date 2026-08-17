@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Living Role Memory — Prototype v0.1</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="topbar"><div class="brand">Living Role Memory <span>v0.1</span></div><div class="scope">Prototype · human clarification, not enterprise data integration</div></header>
+<main>
+<section id="dump" class="screen active">
+  <div class="eyebrow">01 · Knowledge dump</div>
+  <h1>Tell me what the next person needs to know.</h1>
+  <p class="lead">Don’t organise it. Don’t write a handover document. Just explain the role, responsibility or project naturally.</p>
+  <textarea id="dumpInput" placeholder="Example: Marketing normally goes through Michelle. Larger campaigns need Rachel to look at them, and if something is urgent we sometimes skip the usual review..." autofocus></textarea>
+  <div class="actions"><button id="startBtn" class="primary">Challenge my handover →</button><button id="demoBtn" class="ghost">Load example</button></div>
+  <p class="micro">No prepared data required. Prototype v0.1 uses only what you type here.</p>
+</section>
+
+<section id="challenge" class="screen">
+  <div class="eyebrow">02 · AI challenge</div>
+  <div class="progress"><span id="qCount">Question 1</span><div><i id="progressBar"></i></div></div>
+  <div class="trace"><span>Based on what you said</span><blockquote id="sourceQuote"></blockquote></div>
+  <h2 id="questionText"></h2>
+  <textarea id="answerInput" class="answer" placeholder="Answer naturally..."></textarea>
+  <div class="actions"><button id="answerBtn" class="primary">Answer & continue →</button><button id="skipBtn" class="ghost">I don’t know / leave open</button></div>
+  <p id="whyText" class="why"></p>
+</section>
+
+<section id="memory" class="screen wide">
+  <div class="memory-head"><div><div class="eyebrow">03 · Living Role Memory</div><h1>Your handover, made operational.</h1><p class="lead">Structured from your words and the clarifications you added. Unresolved gaps stay visible instead of being guessed.</p></div><div class="readiness"><strong id="readyScore">—</strong><span>handover readiness</span><small>Communication aid, not a completeness score.</small></div></div>
+  <div id="gapBanner" class="gap-banner"></div>
+  <div id="memoryGrid" class="memory-grid"></div>
+  <div class="validation-panel">
+    <div><div class="eyebrow">Manager / +1 validation preview</div><h2>Validate exceptions, not the whole handover.</h2><p>Important organisational rules are surfaced for targeted confirmation.</p></div>
+    <div id="validationCards"></div>
+  </div>
+  <div class="future-note"><strong>What v0.1 does:</strong> listens to a natural handover, challenges ambiguity, captures clarification and structures a Role Memory. <strong>Future hypothesis — not implemented:</strong> authorised enterprise work traces could provide evidence for better questions. This prototype does not connect to Microsoft 365, Teams, Outlook, enterprise search, RAG or organisational systems.</div>
+  <div class="actions"><button id="restartBtn" class="primary">Try another handover</button><button id="exportBtn" class="ghost">Export Role Memory</button></div>
+</section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
