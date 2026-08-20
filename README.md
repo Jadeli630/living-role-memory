@@ -2,6 +2,8 @@
 
 **An experimental AI-native approach to organisational knowledge transfer.**
 
+> **Project status, August 2026:** v0.1 is complete. After a post-build market scan, I found substantial overlap with existing AI knowledge transfer products. I am not moving directly into v0.2. See [`docs/MARKET_RESEARCH_AND_DECISION.md`](docs/MARKET_RESEARCH_AND_DECISION.md) for the evidence and decision.
+
 Enterprise AI is becoming increasingly capable of accessing organisational information. This prototype explores the next problem: **how do we turn information into operational memory?**
 
 > Prototype v0.1 is a proof of concept. It tests one assumption only: can a system identify operational ambiguity in a natural handover and ask follow-up questions that the knowledge holder considers genuinely useful?
@@ -122,6 +124,8 @@ These are future enterprise-development questions, not capabilities claimed by t
 
 ## Future hypothesis — not implemented
 
+**This section records the original product direction. It is not an active v0.2 roadmap.**
+
 A future enterprise version could ask a different question:
 
 > If AI is given appropriately authorised access to enterprise work traces, can it detect unexplained patterns, dependencies, and exceptions and use them to generate better knowledge-transfer questions?
@@ -171,4 +175,5 @@ Start with [`docs/PRODUCT_REASONING.md`](docs/PRODUCT_REASONING.md) for the full
 
 ---
 
-**Status:** Prototype / Proof of Concept · v0.1
+**Status:** Prototype / Proof of Concept · v0.1 complete · further development paused after market review
+
